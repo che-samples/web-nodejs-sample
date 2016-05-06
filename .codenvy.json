@@ -1,0 +1,91 @@
+{
+  "v": "4.0",
+  "name": "NodeJS-Express",
+  "workspace": {
+    "defaultEnv": "node-ws",
+    "environments": [
+      {
+        "name": "node-ws",
+        "machineConfigs": [
+          {
+            "limits": {
+              "ram": 2000
+            },
+            "name": "ws-machine",
+            "type": "docker",
+            "source": {
+              "location": "http://beta.codenvy.com/api/recipe/recipexndywaiw9bfhf8jo/script",
+              "type": "dockerfile"
+            },
+            "dev": true,
+            "servers": [],
+            "envVariables": {},
+            "links": []
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "links": [],
+        "name": "web-nodejs-sample",
+        "attributes": {
+          "vcs.provider.name": [
+            "git"
+          ],
+          "git.current.branch.name": [
+            "master"
+          ],
+          "contribute_to_branch": [
+            "master"
+          ],
+          "git.repository.remotes": [
+            "https://github.com/che-samples/web-nodejs-sample.git"
+          ]
+        },
+        "type": "blank",
+        "source": {
+          "location": "https://github.com/che-samples/web-nodejs-sample.git",
+          "type": "git",
+          "parameters": {}
+        },
+        "path": "/web-nodejs-sample",
+        "problems": [],
+        "mixins": [
+          "pullrequest",
+          "git"
+        ]
+      }
+    ],
+    "name": "node-ws",
+    "commands": [
+      {
+        "commandLine": "cd ${current.project.path}/app && node app.js",
+        "name": "run",
+        "attributes": {
+          "previewUrl": "http://${server.port.3000}"
+        },
+        "type": "custom"
+      }
+    ],
+    "links": []
+  },
+  "ide": {
+    "onProjectsLoaded": {
+      "actions": [
+        {
+          "properties": {
+            "name": "run"
+          },
+          "id": "runCommand"
+        },
+        {
+          "properties": {
+            "file": "/web-nodejs-sample/app/app.js"
+          },
+          "id": "openFile"
+        }
+      ]
+    }
+  }
+}
