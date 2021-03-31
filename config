@@ -1,0 +1,355 @@
+apiVersion: v1
+clusters:
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.aws-ocp44.crw-qe.com:6443
+  name: api-aws-ocp44-crw-qe-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.crw.codereadyqe.com:6443
+  name: api-crw-codereadyqe-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.ocp42.codereadyqe.com:6443
+  name: api-ocp42-codereadyqe-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.ocp43.codereadyqe.com:6443
+  name: api-ocp43-codereadyqe-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.ocp44.codereadyqe.com:6443
+  name: api-ocp44-codereadyqe-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.ocp44.crw-qe.com:6443
+  name: api-ocp44-crw-qe-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.ocp45.crw-qe.com:6443
+  name: api-ocp45-crw-qe-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.ocp46.crw-qe.com:6443
+  name: api-ocp46-crw-qe-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.ocp47.crw-qe.com:6443
+  name: api-ocp47-crw-qe-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.osp-ocp45.crw-qe.com:6443
+  name: api-osp-ocp45-crw-qe-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.rhopp-ocp42.devcluster.openshift.com:6443
+  name: api-rhopp-ocp42-devcluster-openshift-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://api.rhopp-qa.devcluster.openshift.com:6443
+  name: api-rhopp-qa-devcluster-openshift-com:6443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://console.apps.ocp311.crw:8443
+  name: console-apps-ocp311-crw:8443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://console.ocp311-2.crw:8443
+  name: console-ocp311-2-crw:8443
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://console.ocp311.crw:8443
+  name: console-ocp311-crw:8443
+contexts:
+- context:
+    cluster: api-ocp45-crw-qe-com:6443
+    user: user
+  name: /api-ocp45-crw-qe-com:6443/user
+- context:
+    cluster: api-ocp46-crw-qe-com:6443
+    user: iokhrime
+  name: /api-ocp46-crw-qe-com:6443/iokhrime
+- context:
+    cluster: api-ocp44-crw-qe-com:6443
+    namespace: admin-codeready
+    user: admin/api-ocp44-crw-qe-com:6443
+  name: admin-codeready/api-ocp44-crw-qe-com:6443/admin
+- context:
+    cluster: api-ocp44-crw-qe-com:6443
+    namespace: crw-operatorhub-tls-oauth
+    user: admin/api-ocp44-crw-qe-com:6443
+  name: crw-operatorhub-tls-oauth/api-ocp44-crw-qe-com:6443/admin
+- context:
+    cluster: api-crw-codereadyqe-com:6443
+    namespace: crw2ocp4
+    user: kube:admin/api-crw-codereadyqe-com:6443
+  name: crw2ocp4/api-crw-codereadyqe-com:6443/kube:admin
+- context:
+    cluster: api-rhopp-qa-devcluster-openshift-com:6443
+    namespace: crw2ocp4
+    user: kube:admin/api-rhopp-qa-devcluster-openshift-com:6443
+  name: crw2ocp4/api-rhopp-qa-devcluster-openshift-com:6443/kube:admin
+- context:
+    cluster: console-apps-ocp311-crw:8443
+    namespace: crw2ocp4
+    user: developer/console-apps-ocp311-crw:8443
+  name: crw2ocp4/console-apps-ocp311-crw:8443/developer
+- context:
+    cluster: console-ocp311-crw:8443
+    namespace: crw2ocp4
+    user: developer/console-ocp311-crw:8443
+  name: crw2ocp4/console-ocp311-crw:8443/developer
+- context:
+    cluster: api-crw-codereadyqe-com:6443
+    namespace: crw2ocp41
+    user: kube:admin/api-crw-codereadyqe-com:6443
+  name: crw2ocp41/api-crw-codereadyqe-com:6443/kube:admin
+- context:
+    cluster: api-rhopp-qa-devcluster-openshift-com:6443
+    namespace: crw2ocp41
+    user: kube:admin/api-rhopp-qa-devcluster-openshift-com:6443
+  name: crw2ocp41/api-rhopp-qa-devcluster-openshift-com:6443/kube:admin
+- context:
+    cluster: console-apps-ocp311-crw:8443
+    namespace: crw2ocp41
+    user: developer/console-apps-ocp311-crw:8443
+  name: crw2ocp41/console-apps-ocp311-crw:8443/developer
+- context:
+    cluster: console-ocp311-crw:8443
+    namespace: crw2ocp41
+    user: developer/console-ocp311-crw:8443
+  name: crw2ocp41/console-ocp311-crw:8443/developer
+- context:
+    cluster: api-aws-ocp44-crw-qe-com:6443
+    namespace: default
+    user: admin/api-aws-ocp44-crw-qe-com:6443
+  name: default/api-aws-ocp44-crw-qe-com:6443/admin
+- context:
+    cluster: api-crw-codereadyqe-com:6443
+    namespace: default
+    user: kube:admin/api-crw-codereadyqe-com:6443
+  name: default/api-crw-codereadyqe-com:6443/kube:admin
+- context:
+    cluster: api-ocp42-codereadyqe-com:6443
+    namespace: default
+    user: kube:admin/api-ocp42-codereadyqe-com:6443
+  name: default/api-ocp42-codereadyqe-com:6443/kube:admin
+- context:
+    cluster: api-ocp43-codereadyqe-com:6443
+    namespace: default
+    user: admin/api-ocp43-codereadyqe-com:6443
+  name: default/api-ocp43-codereadyqe-com:6443/admin
+- context:
+    cluster: api-ocp43-codereadyqe-com:6443
+    namespace: default
+    user: kube:admin/api-ocp43-codereadyqe-com:6443
+  name: default/api-ocp43-codereadyqe-com:6443/kube:admin
+- context:
+    cluster: api-ocp44-codereadyqe-com:6443
+    namespace: default
+    user: admin/api-ocp44-codereadyqe-com:6443
+  name: default/api-ocp44-codereadyqe-com:6443/admin
+- context:
+    cluster: api-ocp44-codereadyqe-com:6443
+    namespace: default
+    user: kube:admin/api-ocp44-codereadyqe-com:6443
+  name: default/api-ocp44-codereadyqe-com:6443/kube:admin
+- context:
+    cluster: api-ocp44-crw-qe-com:6443
+    namespace: default
+    user: admin/api-ocp44-crw-qe-com:6443
+  name: default/api-ocp44-crw-qe-com:6443/admin
+- context:
+    cluster: api-ocp45-crw-qe-com:6443
+    namespace: default
+    user: admin
+  name: default/api-ocp45-crw-qe-com:6443/admin
+- context:
+    cluster: api-ocp46-crw-qe-com:6443
+    namespace: default
+    user: admin
+  name: default/api-ocp46-crw-qe-com:6443/admin
+- context:
+    cluster: api-ocp47-crw-qe-com:6443
+    namespace: default
+    user: admin
+  name: default/api-ocp47-crw-qe-com:6443/admin
+- context:
+    cluster: api-osp-ocp45-crw-qe-com:6443
+    namespace: default
+    user: admin/api-osp-ocp45-crw-qe-com:6443
+  name: default/api-osp-ocp45-crw-qe-com:6443/admin
+- context:
+    cluster: console-ocp311-2-crw:8443
+    namespace: default
+    user: developer/console-ocp311-2-crw:8443
+  name: default/console-ocp311-2-crw:8443/developer
+- context:
+    cluster: console-ocp311-crw:8443
+    namespace: default
+    user: admin/console-ocp311-crw:8443
+  name: default/console-ocp311-crw:8443/admin
+- context:
+    cluster: console-ocp311-crw:8443
+    namespace: default
+    user: developer/console-ocp311-crw:8443
+  name: default/console-ocp311-crw:8443/developer
+- context:
+    cluster: api-osp-ocp45-crw-qe-com:6443
+    namespace: iokhrime-crw-1
+    user: admin/api-osp-ocp45-crw-qe-com:6443
+  name: iokhrime-crw-1/api-osp-ocp45-crw-qe-com:6443/admin
+- context:
+    cluster: api-osp-ocp45-crw-qe-com:6443
+    namespace: iokhrime-crw-2
+    user: admin/api-osp-ocp45-crw-qe-com:6443
+  name: iokhrime-crw-2/api-osp-ocp45-crw-qe-com:6443/admin
+- context:
+    cluster: api-ocp44-crw-qe-com:6443
+    namespace: iokhrime-crw-4
+    user: admin/api-ocp44-crw-qe-com:6443
+  name: iokhrime-crw-4/api-ocp44-crw-qe-com:6443/admin
+- context:
+    cluster: api-ocp44-crw-qe-com:6443
+    namespace: iokhrime-crw-5
+    user: admin/api-ocp44-crw-qe-com:6443
+  name: iokhrime-crw-5/api-ocp44-crw-qe-com:6443/admin
+- context:
+    cluster: api-aws-ocp44-crw-qe-com:6443
+    namespace: iokhrime-crw
+    user: admin/api-aws-ocp44-crw-qe-com:6443
+  name: iokhrime-crw/api-aws-ocp44-crw-qe-com:6443/admin
+- context:
+    cluster: api-crw-codereadyqe-com:6443
+    namespace: iokhrime-crw
+    user: kube:admin/api-crw-codereadyqe-com:6443
+  name: iokhrime-crw/api-crw-codereadyqe-com:6443/kube:admin
+- context:
+    cluster: api-ocp42-codereadyqe-com:6443
+    namespace: iokhrime-crw
+    user: kube:admin/api-ocp42-codereadyqe-com:6443
+  name: iokhrime-crw/api-ocp42-codereadyqe-com:6443/kube:admin
+- context:
+    cluster: api-ocp43-codereadyqe-com:6443
+    namespace: iokhrime-crw
+    user: admin/api-ocp43-codereadyqe-com:6443
+  name: iokhrime-crw/api-ocp43-codereadyqe-com:6443/admin
+- context:
+    cluster: api-ocp43-codereadyqe-com:6443
+    namespace: iokhrime-crw
+    user: kube:admin/api-ocp43-codereadyqe-com:6443
+  name: iokhrime-crw/api-ocp43-codereadyqe-com:6443/kube:admin
+- context:
+    cluster: api-ocp44-crw-qe-com:6443
+    namespace: iokhrime-crw
+    user: admin/api-ocp44-crw-qe-com:6443
+  name: iokhrime-crw/api-ocp44-crw-qe-com:6443/admin
+- context:
+    cluster: api-ocp45-crw-qe-com:6443
+    namespace: iokhrime-crw
+    user: admin/api-ocp45-crw-qe-com:6443
+  name: iokhrime-crw/api-ocp45-crw-qe-com:6443/admin
+- context:
+    cluster: api-osp-ocp45-crw-qe-com:6443
+    namespace: iokhrime-crw
+    user: admin/api-osp-ocp45-crw-qe-com:6443
+  name: iokhrime-crw/api-osp-ocp45-crw-qe-com:6443/admin
+- context:
+    cluster: api-rhopp-ocp42-devcluster-openshift-com:6443
+    namespace: iokhrime-crw
+    user: kube:admin/api-rhopp-ocp42-devcluster-openshift-com:6443
+  name: iokhrime-crw/api-rhopp-ocp42-devcluster-openshift-com:6443/kube:admin
+- context:
+    cluster: api-rhopp-qa-devcluster-openshift-com:6443
+    namespace: iokhrime-crw
+    user: kube:admin/api-rhopp-qa-devcluster-openshift-com:6443
+  name: iokhrime-crw/api-rhopp-qa-devcluster-openshift-com:6443/kube:admin
+- context:
+    cluster: console-ocp311-2-crw:8443
+    namespace: iokhrime-crw
+    user: developer/console-ocp311-2-crw:8443
+  name: iokhrime-crw/console-ocp311-2-crw:8443/developer
+- context:
+    cluster: console-ocp311-crw:8443
+    namespace: iokhrime-crw
+    user: admin/console-ocp311-crw:8443
+  name: iokhrime-crw/console-ocp311-crw:8443/admin
+- context:
+    cluster: console-ocp311-crw:8443
+    namespace: iokhrime-crw
+    user: developer/console-ocp311-crw:8443
+  name: iokhrime-crw/console-ocp311-crw:8443/developer
+- context:
+    cluster: api-ocp44-crw-qe-com:6443
+    namespace: iokhrime-crw2
+    user: admin/api-ocp44-crw-qe-com:6443
+  name: iokhrime-crw2/api-ocp44-crw-qe-com:6443/admin
+- context:
+    cluster: api-crw-codereadyqe-com:6443
+    namespace: iokhrime-ocp
+    user: kube:admin/api-crw-codereadyqe-com:6443
+  name: iokhrime-ocp/api-crw-codereadyqe-com:6443/kube:admin
+current-context: default/api-ocp46-crw-qe-com:6443/admin
+kind: Config
+preferences: {}
+users:
+- name: admin
+  user:
+    token: sha256~Z_ez-1kRALdT8PAV05asZzIw_sgx0tR8XP5bVI-dzNg
+- name: admin/api-aws-ocp44-crw-qe-com:6443
+  user:
+    token: gP6o-Us8mLtIISBVxZm451PmD5ZpXJvg5eRCEjhpbz8
+- name: admin/api-ocp43-codereadyqe-com:6443
+  user:
+    token: tWvx1mpMrEYrtLDLNtWC_-njH1ZUdIZqrjgibnbT9Vw
+- name: admin/api-ocp44-codereadyqe-com:6443
+  user:
+    token: 55zYoPFkzTcKAg4aUjjmLo9-sYZkpw3nECIwtA9gbwU
+- name: admin/api-ocp44-crw-qe-com:6443
+  user:
+    token: VBqLOfopIa0ariErxRmytrFdz0bHhoSbPm45RSq9YEw
+- name: admin/api-ocp45-crw-qe-com:6443
+  user:
+    token: tLSDJEeRFjbOg744zLed2eMtd-v6VRAqLcaCPWwxjhg
+- name: admin/api-ocp46-crw-qe-com:6443
+  user:
+    token: sha256~bV5zVeQx8OQt74rX8eZnHnRDnR-NmJPtUv8ACATGyIU
+- name: admin/api-osp-ocp45-crw-qe-com:6443
+  user:
+    token: 3ugNX_UdfVk_hnmqYX47C5T9xiY4iEEgTqG28GI0SPw
+- name: admin/console-ocp311-crw:8443
+  user:
+    token: NX9o7i4chUvJ9AOebX8zzEjzOO63EkZUg8GtYx7EDts
+- name: developer/console-apps-ocp311-crw:8443
+  user:
+    token: MtZ0PYCeF_Lm8Tuq2ti0EvRX80xO7VPit8zUY0cAgeU
+- name: developer/console-ocp311-2-crw:8443
+  user:
+    token: UNLAdyliUWlpd9GDEnlUaGe44rAv4NG7fg-wFF7Fe3c
+- name: developer/console-ocp311-crw:8443
+  user:
+    token: U-a9rIWBDH71bOHIYSCQw-gPlYlm9MuhRmRXAnVmmtE
+- name: iokhrime
+  user:
+    token: sha256~98VpfDMIYu0Lue-U0BZWOqrjEFWpQ2Yis6dR7HALUkU
+- name: kube:admin/api-crw-codereadyqe-com:6443
+  user:
+    token: dDGrJTbkIvQ2hPYTP8kf-myKnXscdZnfpcMYmAUAP5Y
+- name: kube:admin/api-ocp42-codereadyqe-com:6443
+  user:
+    token: mhf8WD9b6_k2AK0z7ieHuONVRz4F1msobkykHm8-jdk
+- name: kube:admin/api-ocp43-codereadyqe-com:6443
+  user:
+    token: hMsNKR2vg80xfU1gOdfVBiSA7skTdc2-JnXzvYIWUSc
+- name: kube:admin/api-ocp44-codereadyqe-com:6443
+  user:
+    token: I81VghAdA9Rhv_nx64--F080C5662yHtRvM-qe-nePU
+- name: kube:admin/api-rhopp-ocp42-devcluster-openshift-com:6443
+  user:
+    token: hyLsqoxblcpT82kAdBkwUmyfIkMAd16tyLF3F_6thzY
+- name: kube:admin/api-rhopp-qa-devcluster-openshift-com:6443
+  user:
+    token: 6ZtUKqcgdTfhTGVVPwIBqi1M5kDfrqii_Ze7irBJnJ8
+- name: user
+  user:
+    token: shMIVKw_mdeqEiun6l3fDjZCLIOSkgbwpIw5pTHqvHE
