@@ -1,0 +1,51 @@
+schemaVersion: 2.1.0
+metadata:
+  name: nodejs-web-app
+components:
+  - name: nodejs
+    container:
+      image: quay.io/eclipse/che-nodejs10-ubi:next
+      endpoints:
+        - exposure: public
+          name: nodejs
+          protocol: http
+          targetPort: 3000
+      memoryLimit: 1G
+      mountSources: true
+commands:
+  - id: dependencies
+    exec:
+      label: "Download dependencies"
+      component: nodejs
+      workingDir: ${PROJECTS_ROOT}/web-nodejs-sample/app
+      commandLine: "npm install"
+      group:
+        kind: build
+        isDefault: true
+  - id: runapp
+    exec:
+      label: "Run the web app"
+      component: nodejs
+      workingDir: ${PROJECTS_ROOT}/web-nodejs-sample/app
+      commandLine: "nodemon app.js"
+      group:
+        kind: run
+  - id: debug
+    exec:
+      label: "Run the web app (debugging enabled)"
+      component: nodejs
+      workingDir: ${PROJECTS_ROOT}/web-nodejs-sample/app
+      commandLine: "nodemon --inspect app.js"
+      group:
+        kind: debug
+        isDefault: true
+  - id: stopapp
+    exec:
+      label: "Stop the web app"
+      component: nodejs
+      commandLine: >-
+          node_server_pids=$(pgrep -fx '.*nodemon (--inspect )?app.js' | tr "\\n" " ") &&
+          echo "Stopping node server with PIDs: ${node_server_pids}" && 
+          kill -15 ${node_server_pids} &>/dev/null && echo 'Done.'
+      group:
+        kind: run
