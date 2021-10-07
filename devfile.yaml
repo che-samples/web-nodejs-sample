@@ -6,7 +6,7 @@ attributes:
 components:
   - name: nodejs
     container:
-      image: quay.io/devfile/universal-developer-image:ubi8-0281b9d
+      image: quay.io/devfile/universal-developer-image:ubi8-b452131
       endpoints:
         - exposure: public
           name: nodejs
