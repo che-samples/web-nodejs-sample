@@ -6,7 +6,7 @@ attributes:
 components:
   - name: nodejs
     container:
-      image: quay.io/eclipse/che-nodejs10-ubi:next
+      image: quay.io/devfile/base-developer-image:ubi8-7bd4fe3
       endpoints:
         - exposure: public
           name: nodejs
