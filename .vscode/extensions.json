@@ -3,6 +3,7 @@
     // for the documentation about the extensions.json format
     "recommendations": [
       "vscode.typescript-language-features",
-      "ms-vscode.js-debug"
+      "ms-vscode.js-debug",
+      "ms-vscode.vscode-github-pullrequest",
     ]
 }
