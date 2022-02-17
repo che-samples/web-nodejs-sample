@@ -1,0 +1,8 @@
+schemaVersion: 2.1.0
+metadata:
+  name: yaml-plugin
+components:
+  - name: nodejs
+    container:
+      image: quay.io/devfile/universal-developer-image:ubi8-b452131
+      memoryLimit: 1G
