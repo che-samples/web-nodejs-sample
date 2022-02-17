@@ -1,3 +1,5 @@
+This branch is temporarily used for plugin typescript tests. Please don't delete it.
+
 # web-nodejs-sample
 
 ExpressJS Sample Application
