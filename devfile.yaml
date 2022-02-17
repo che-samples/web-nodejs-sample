@@ -1,0 +1,18 @@
+schemaVersion: 2.1.0
+metadata:
+  name: typescript-plugin
+components:
+  - name: nodejs
+    container:
+      image: quay.io/devfile/universal-developer-image:ubi8-b452131
+      memoryLimit: 1G
+commands:
+  - exec:
+      commandLine: npm install && nodemon --inspect app.js
+      component: nodejs
+      group:
+        isDefault: true
+        kind: build
+      label: run the web app (debugging enabled)
+      workingDir: '${PROJECTS_ROOT}/web-nodejs-sample/app'
+    id: run-the-web-app
