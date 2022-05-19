@@ -4,5 +4,5 @@ metadata:
 components:
   - name: nodejs
     container:
-      image: quay.io/devfile/universal-developer-image:ubi8-latest
+      image: quay.io/devfile/universal-developer-image:ubi8-b452131
       memoryLimit: 1G
