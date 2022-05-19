@@ -2,7 +2,7 @@ schemaVersion: 2.1.0
 metadata:
   name: nodejs-web-app
 components:
-  - name: tools
+  - name: nodejs
     container:
       image: quay.io/devfile/universal-developer-image:ubi8-latest
       endpoints:
@@ -10,7 +10,7 @@ components:
           name: nodejs
           protocol: http
           targetPort: 3000
-      memoryLimit: 2G
+      memoryLimit: 1G
       mountSources: true
       volumeMounts:
         - name: npm
