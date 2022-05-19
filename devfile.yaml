@@ -10,7 +10,7 @@ components:
           name: nodejs
           protocol: http
           targetPort: 3000
-      memoryLimit: 1G
+      memoryLimit: 2G
       mountSources: true
       volumeMounts:
         - name: npm
